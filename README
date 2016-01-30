@@ -1,0 +1,22 @@
+# What are these tools?
+These are tools for creating a mirror site of camel.apache.org.
+
+- extract_links.sh
+   This script extracts internal links from a specified HTML file, and add them
+   into path_list.txt to make a list of files that is needed to obtain from the
+   original site.
+
+- tweak_html.sh
+   This script tweaks a specified HTML file to make it available under a
+   different domain name and make it work with Transifex Live.
+   https://www.transifex.com/product/transifexlive/
+
+- update.sh
+   This is the main script. It runs the scripts above against all files listed
+   in path_list.txt.
+
+# How to use
+Just run update.sh once or twice to obtain HTML files.
+
+Note: The script makes hundreds of HTTP requests to http://camel.apache.org/.
+      Please use it with moderation.
